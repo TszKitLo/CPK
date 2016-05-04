@@ -1,0 +1,10 @@
+PODS:
+  - MaterialKit (0.4)
+
+DEPENDENCIES:
+  - MaterialKit (~> 0.4)
+
+SPEC CHECKSUMS:
+  MaterialKit: 2e5267bcf410b82793f2b92d2111f8ae4ed2c3f2
+
+COCOAPODS: 0.39.0
