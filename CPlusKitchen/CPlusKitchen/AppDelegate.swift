@@ -17,10 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-        // Set all navigation bar to orange and its items to white
+        // Set all navigation bar to themeOrange and its items to white
         UINavigationBar.appearance().barStyle = UIBarStyle.Black
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
-        UINavigationBar.appearance().barTintColor = UIColor(red: 255/255, green: 171/255, blue: 0/255, alpha: 100/100)  //green: 154
+        UINavigationBar.appearance().barTintColor = UIColor.themeOrange()  
         
         
         

@@ -8,54 +8,56 @@
 
 import Foundation
 import UIKit
-import MaterialKit
+import Material
 
-class SignUpVC: UIViewController, UITextFieldDelegate{
+class SignUpVC: UIViewController, TextFieldDelegate { // UIImagePickerControllerDelegate
     
-    @IBOutlet weak var navigationBar: UINavigationItem!
+    var user = User()
+    
     @IBOutlet weak var backButton: UIBarButtonItem!
-
-    @IBOutlet weak var clickImage: UIImageView!
-
-    @IBOutlet weak var lastNameField: MKTextField!
-    @IBOutlet weak var firstNameField: MKTextField!
-    @IBOutlet weak var emailField: MKTextField!
-    @IBOutlet weak var passwordField: MKTextField!
-    @IBOutlet weak var userIcon: UIImageView!
     
+//    @IBOutlet weak var userIcon: UIImageView!
+    @IBOutlet weak var firstNameField: TextField!
+    @IBOutlet weak var lastNameField: TextField!
+    @IBOutlet weak var emailField: TextField!
+    @IBOutlet weak var passwordField: TextField!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        userIcon.image = UIImage(named: "defaultUser.png")
-        lastNameField.delegate = self
-        firstNameField.delegate = self
-        emailField.delegate = self
-        passwordField.delegate = self
+
+        prepareLastName()
+        prepareFirstName()
+        prepareEmail()
+        preparePassword()
         
-        firstNameField.layer.borderColor = UIColor.clearColor().CGColor
-        lastNameField.layer.borderColor = UIColor.clearColor().CGColor
-        passwordField.layer.borderColor = UIColor.clearColor().CGColor
-        emailField.layer.borderColor = UIColor.clearColor().CGColor
         
     }
     
-    
+    // Back to landing view
     @IBAction func backButton(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
     }
     
-//    let singleTap = UITapGestureRecognizer(target: self, action: Selector("tapDetected"))
-//    singleTap.numberOfTapsRequired = 1
-//    clickImage.userInteractionEnabled = true
-//    clickImage.addGestureRecognizer(singleTap)
+
     
-    func tapDetected() {
-        print("Single Tap on imageview")
+    func prepareLastName(){
+        lastNameField.delegate = self
     }
     
+    func prepareFirstName(){
+        firstNameField.delegate = self
+    }
     
+    func prepareEmail(){
+        emailField.delegate = self
+    }
+    
+    func preparePassword(){
+        passwordField.delegate = self
+    }
+
     // Handle keyboard return
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         
@@ -64,8 +66,8 @@ class SignUpVC: UIViewController, UITextFieldDelegate{
         return true
     }
     
-    // onClick sign uo 
-    @IBAction func signUpAction(sender: AnyObject) {
+    // onClick Next
+    @IBAction func next(sender: AnyObject) {
         
         if( lastNameField.text == "" || firstNameField.text == "" || emailField.text == "" || passwordField.text == "" ){
             
@@ -80,7 +82,22 @@ class SignUpVC: UIViewController, UITextFieldDelegate{
             self.presentViewController(alert, animated: true, completion: nil)
             
         } else {
-            
+            self.performSegueWithIdentifier("toAdditional", sender: self)
         }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if let navController = segue.destinationViewController as? UINavigationController {
+            if let nextView = navController.viewControllers.first as? AdditionalSignUpVC {
+                    user.firstName = firstNameField.text!
+                    user.lastName = lastNameField.text!
+                    user.email = emailField.text!
+                    user.password = passwordField.text!
+
+                    nextView.user = user
+            }
+        }
+        
     }
 }

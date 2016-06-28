@@ -9,20 +9,22 @@
 import Foundation
 import UIKit
 
+
 class User {
     
-    var lastName: String
-    var firstName: String
-    var email: String
-    var password: String
-    var icon: NSData
+    var lastName = ""
+    var firstName = ""
+    var email = ""
+    var password = ""
+    var profilePic = UIImagePNGRepresentation(UIImage(named: "defaultUser")!)!
+    var address = ""
     
     init(){
-        self.lastName = ""
-        self.firstName = ""
-        self.email = ""
-        self.password = ""
-        self.icon = UIImagePNGRepresentation(UIImage(named: "defaultUser")!)!
+        
+    }
+    
+    deinit {
+        
     }
     
     

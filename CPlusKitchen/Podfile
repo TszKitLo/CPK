@@ -5,5 +5,6 @@ use_frameworks!
 
 target 'CPlusKitchen' do
 pod 'MaterialKit', '~> 0.4'
+pod 'Material', '~> 1.0'
 end
 
