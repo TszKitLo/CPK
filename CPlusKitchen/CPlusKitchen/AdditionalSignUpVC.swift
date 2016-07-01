@@ -59,13 +59,10 @@ class AdditionalSignUpVC: UIViewController{
         
         
         FIRAuth.auth()?.createUserWithEmail(user.email, password: user.password, completion: { AuthUser, err in
-            
-            
-            
             if err != nil{
                 print(err)
             }else{
-                DataService.instance.createUser(AuthUser!.uid, userObj: ["provider":"email","url":"www.google.com"]) // need to change to user data
+                DataService.instance.createUser(AuthUser!.uid, userObj: self.user.getUserObject()) // need to change to user data
                 
                 NSUserDefaults.standardUserDefaults().setValue((AuthUser?.uid)!, forKey: USER_ID)
                 self.performSegueWithIdentifier("goToHome", sender: nil)

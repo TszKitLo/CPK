@@ -28,4 +28,14 @@ class User {
     }
     
     
+    func getUserObject() -> [String:String]{
+        
+        let userObject = ["firstName": firstName , "lastName" : lastName , "email" : email , "address": address]
+        
+        return userObject
+    }
+    
+    
+    
+    
 }
