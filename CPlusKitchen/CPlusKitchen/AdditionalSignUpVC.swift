@@ -23,7 +23,14 @@ class AdditionalSignUpVC: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
         prepareProfileImg()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        
     }
     
     // MARK: viewDidLoad helper functions
@@ -50,15 +57,23 @@ class AdditionalSignUpVC: UIViewController{
     
     @IBAction func signUp(sender: AnyObject) {
         
+        
         FIRAuth.auth()?.createUserWithEmail(user.email, password: user.password, completion: { AuthUser, err in
             
-            DataService.instance.createUser(AuthUser!.uid, userObj: ["provider":"email","url":"www.google.com"]) // need to change to user data
             
-            NSUserDefaults.standardUserDefaults().setValue((AuthUser?.uid)!, forKey: USER_ID)
-            self.performSegueWithIdentifier("goToHome", sender: nil)
-            FIRAuth.auth()?.signInWithEmail(self.user.email, password: self.user.password, completion: { AuthUser, err in
+            
+            if err != nil{
+                print(err)
+            }else{
+                DataService.instance.createUser(AuthUser!.uid, userObj: ["provider":"email","url":"www.google.com"]) // need to change to user data
                 
-            })
+                NSUserDefaults.standardUserDefaults().setValue((AuthUser?.uid)!, forKey: USER_ID)
+                self.performSegueWithIdentifier("goToHome", sender: nil)
+                FIRAuth.auth()?.signInWithEmail(self.user.email, password: self.user.password, completion: { AuthUser, err in
+                    
+                })
+                
+            }
         })
         
         

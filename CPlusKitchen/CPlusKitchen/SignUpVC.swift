@@ -21,7 +21,7 @@ class SignUpVC: UIViewController, TextFieldDelegate { // UIImagePickerController
     
     @IBOutlet weak var backButton: UIBarButtonItem!
     
-//    @IBOutlet weak var userIcon: UIImageView!
+    //    @IBOutlet weak var userIcon: UIImageView!
     @IBOutlet weak var firstNameField: TextField!
     @IBOutlet weak var lastNameField: TextField!
     @IBOutlet weak var emailField: TextField!
@@ -31,7 +31,7 @@ class SignUpVC: UIViewController, TextFieldDelegate { // UIImagePickerController
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
+        
         prepareLastName()
         prepareFirstName()
         prepareEmail()
@@ -45,7 +45,7 @@ class SignUpVC: UIViewController, TextFieldDelegate { // UIImagePickerController
         dismissViewControllerAnimated(true, completion: nil)
     }
     
-
+    
     
     func prepareLastName(){
         lastNameField.delegate = self
@@ -62,7 +62,7 @@ class SignUpVC: UIViewController, TextFieldDelegate { // UIImagePickerController
     func preparePassword(){
         passwordField.delegate = self
     }
-
+    
     // Handle keyboard return
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         
@@ -89,20 +89,20 @@ class SignUpVC: UIViewController, TextFieldDelegate { // UIImagePickerController
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        if let navController = segue.destinationViewController as? UINavigationController {
-            if let nextView = navController.viewControllers.first as? AdditionalSignUpVC {
+        if segue.identifier == "toAdditional"{
+            if let navController = segue.destinationViewController as? AdditionalSignUpVC {
                     user.firstName = firstNameField.text!
                     user.lastName = lastNameField.text!
                     user.email = emailField.text!
                     user.password = passwordField.text!
-
-                    nextView.user = user
-            }
+                    navController.user = user
+                }
+            
         }
         
     }
     
-
+    
     
     private func ShowErrAlert(title : String , msg: String){
         let alert = UIAlertController(title: title, message: msg, preferredStyle: .Alert)
