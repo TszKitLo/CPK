@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A0A3DE61D25FC8100053EA0 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A0A3DE31D25FC8100053EA0 /* Bolts.framework */; };
+		0A0A3DE71D25FC8100053EA0 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A0A3DE41D25FC8100053EA0 /* FBSDKCoreKit.framework */; };
+		0A0A3DE81D25FC8100053EA0 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A0A3DE51D25FC8100053EA0 /* FBSDKLoginKit.framework */; };
+		0A0A3DEA1D25FD6000053EA0 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0A3DE91D25FD6000053EA0 /* DataService.swift */; };
+		0A0A3DEC1D25FD8800053EA0 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0A3DEB1D25FD8800053EA0 /* Constant.swift */; };
+		0A0A3DF41D260C5E00053EA0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A0A3DF31D260C5E00053EA0 /* GoogleService-Info.plist */; };
+		0A0A3DF61D260D7E00053EA0 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0A3DF51D260D7E00053EA0 /* Home.swift */; };
 		C330923E1D1CE66B000A14FD /* AdditionalSignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C330923D1D1CE66B000A14FD /* AdditionalSignUpVC.swift */; };
 		C3472CFD1CCF02D8007CC4F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3472CFC1CCF02D8007CC4F7 /* AppDelegate.swift */; };
 		C3472CFF1CCF02D8007CC4F7 /* LandingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3472CFE1CCF02D8007CC4F7 /* LandingVC.swift */; };
@@ -19,11 +26,19 @@
 		C38B07511CDA02CA00423AB7 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38B07501CDA02CA00423AB7 /* Util.swift */; };
 		C39219BD1D138BD400B1B24C /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39219BC1D138BD400B1B24C /* Event.swift */; };
 		C39219BF1D138C7B00B1B24C /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39219BE1D138C7B00B1B24C /* Payment.swift */; };
-		E2B01CBF38F6159E3C6A78EB /* Pods_CPlusKitchen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CEF4554F3024D904A9437DD /* Pods_CPlusKitchen.framework */; };
+		F32B37D3377342CC1491654C /* Pods_CPlusKitchen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0188042C45B9F31E8BBC74AC /* Pods_CPlusKitchen.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5CEF4554F3024D904A9437DD /* Pods_CPlusKitchen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CPlusKitchen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0188042C45B9F31E8BBC74AC /* Pods_CPlusKitchen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CPlusKitchen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A0A3DE31D25FC8100053EA0 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		0A0A3DE41D25FC8100053EA0 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		0A0A3DE51D25FC8100053EA0 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		0A0A3DE91D25FD6000053EA0 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		0A0A3DEB1D25FD8800053EA0 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		0A0A3DF31D260C5E00053EA0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0A0A3DF51D260D7E00053EA0 /* Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		7E661D4234041A03F9F3AE57 /* Pods-CPlusKitchen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CPlusKitchen.release.xcconfig"; path = "Pods/Target Support Files/Pods-CPlusKitchen/Pods-CPlusKitchen.release.xcconfig"; sourceTree = "<group>"; };
 		C330923D1D1CE66B000A14FD /* AdditionalSignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionalSignUpVC.swift; sourceTree = "<group>"; };
 		C3472CF91CCF02D8007CC4F7 /* CPlusKitchen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CPlusKitchen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3472CFC1CCF02D8007CC4F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,8 +54,7 @@
 		C39219BC1D138BD400B1B24C /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		C39219BE1D138C7B00B1B24C /* Payment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
 		C3F632831D21FC5200D43261 /* Material.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Material.framework; path = "../../../Library/Developer/Xcode/DerivedData/CPlusKitchen-gqjumvqijdljqgbxsekwevzzooly/Build/Products/Debug-iphonesimulator/Material.framework"; sourceTree = "<group>"; };
-		E9DF26F3429EEBC50C81BC2C /* Pods-CPlusKitchen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CPlusKitchen.release.xcconfig"; path = "Pods/Target Support Files/Pods-CPlusKitchen/Pods-CPlusKitchen.release.xcconfig"; sourceTree = "<group>"; };
-		EDCE329317337463CBDA1A5A /* Pods-CPlusKitchen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CPlusKitchen.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CPlusKitchen/Pods-CPlusKitchen.debug.xcconfig"; sourceTree = "<group>"; };
+		EB607D1082A7726FDFE1542F /* Pods-CPlusKitchen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CPlusKitchen.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CPlusKitchen/Pods-CPlusKitchen.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,27 +62,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2B01CBF38F6159E3C6A78EB /* Pods_CPlusKitchen.framework in Frameworks */,
+				F32B37D3377342CC1491654C /* Pods_CPlusKitchen.framework in Frameworks */,
+				0A0A3DE71D25FC8100053EA0 /* FBSDKCoreKit.framework in Frameworks */,
+				0A0A3DE81D25FC8100053EA0 /* FBSDKLoginKit.framework in Frameworks */,
+				0A0A3DE61D25FC8100053EA0 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		85967E87D0DA47843C6F0EF0 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				EDCE329317337463CBDA1A5A /* Pods-CPlusKitchen.debug.xcconfig */,
-				E9DF26F3429EEBC50C81BC2C /* Pods-CPlusKitchen.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		AFCC40B746604BA7AF19428C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0A0A3DE31D25FC8100053EA0 /* Bolts.framework */,
+				0A0A3DE41D25FC8100053EA0 /* FBSDKCoreKit.framework */,
+				0A0A3DE51D25FC8100053EA0 /* FBSDKLoginKit.framework */,
 				C3F632831D21FC5200D43261 /* Material.framework */,
-				5CEF4554F3024D904A9437DD /* Pods_CPlusKitchen.framework */,
+				0188042C45B9F31E8BBC74AC /* Pods_CPlusKitchen.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -78,8 +89,8 @@
 			children = (
 				C3472CFB1CCF02D8007CC4F7 /* CPlusKitchen */,
 				C3472CFA1CCF02D8007CC4F7 /* Products */,
-				85967E87D0DA47843C6F0EF0 /* Pods */,
 				AFCC40B746604BA7AF19428C /* Frameworks */,
+				ED0490799D9091A6589AFF4A /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +113,7 @@
 				C3472D001CCF02D8007CC4F7 /* Main.storyboard */,
 				C3472D031CCF02D8007CC4F7 /* Assets.xcassets */,
 				C3472D051CCF02D8007CC4F7 /* LaunchScreen.storyboard */,
+				0A0A3DF31D260C5E00053EA0 /* GoogleService-Info.plist */,
 				C3472D081CCF02D8007CC4F7 /* Info.plist */,
 			);
 			path = CPlusKitchen;
@@ -131,6 +143,7 @@
 				C3472D0E1CCF0326007CC4F7 /* LoginVC.swift */,
 				C3472D101CCF0336007CC4F7 /* SignUpVC.swift */,
 				C330923D1D1CE66B000A14FD /* AdditionalSignUpVC.swift */,
+				0A0A3DF51D260D7E00053EA0 /* Home.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -138,9 +151,20 @@
 		C3472D151CCF0375007CC4F7 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				0A0A3DEB1D25FD8800053EA0 /* Constant.swift */,
+				0A0A3DE91D25FD6000053EA0 /* DataService.swift */,
 				C38B07501CDA02CA00423AB7 /* Util.swift */,
 			);
 			name = Util;
+			sourceTree = "<group>";
+		};
+		ED0490799D9091A6589AFF4A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EB607D1082A7726FDFE1542F /* Pods-CPlusKitchen.debug.xcconfig */,
+				7E661D4234041A03F9F3AE57 /* Pods-CPlusKitchen.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,12 +174,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C3472D0B1CCF02D8007CC4F7 /* Build configuration list for PBXNativeTarget "CPlusKitchen" */;
 			buildPhases = (
-				E44A84BA11958999FCBDF57E /* Check Pods Manifest.lock */,
+				B9456B9FB4C47C1EA371A87B /* [CP] Check Pods Manifest.lock */,
 				C3472CF51CCF02D8007CC4F7 /* Sources */,
 				C3472CF61CCF02D8007CC4F7 /* Frameworks */,
 				C3472CF71CCF02D8007CC4F7 /* Resources */,
-				51F3FC0B2D70C51A140C66C6 /* Embed Pods Frameworks */,
-				CE43664D83F5C925800D59A7 /* Copy Pods Resources */,
+				6B5117B8201009C84025710B /* [CP] Embed Pods Frameworks */,
+				16C5A70904FCCFCC65EBA75E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -205,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3472D071CCF02D8007CC4F7 /* LaunchScreen.storyboard in Resources */,
+				0A0A3DF41D260C5E00053EA0 /* GoogleService-Info.plist in Resources */,
 				C3472D041CCF02D8007CC4F7 /* Assets.xcassets in Resources */,
 				C3472D021CCF02D8007CC4F7 /* Main.storyboard in Resources */,
 			);
@@ -213,29 +238,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		51F3FC0B2D70C51A140C66C6 /* Embed Pods Frameworks */ = {
+		16C5A70904FCCFCC65EBA75E /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CPlusKitchen/Pods-CPlusKitchen-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CE43664D83F5C925800D59A7 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -243,14 +253,29 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CPlusKitchen/Pods-CPlusKitchen-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E44A84BA11958999FCBDF57E /* Check Pods Manifest.lock */ = {
+		6B5117B8201009C84025710B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CPlusKitchen/Pods-CPlusKitchen-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9456B9FB4C47C1EA371A87B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,7 +298,10 @@
 				C36ECA151CD0572B00C9A361 /* User.swift in Sources */,
 				C39219BD1D138BD400B1B24C /* Event.swift in Sources */,
 				C39219BF1D138C7B00B1B24C /* Payment.swift in Sources */,
+				0A0A3DEC1D25FD8800053EA0 /* Constant.swift in Sources */,
 				C3472D0F1CCF0326007CC4F7 /* LoginVC.swift in Sources */,
+				0A0A3DF61D260D7E00053EA0 /* Home.swift in Sources */,
+				0A0A3DEA1D25FD6000053EA0 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,9 +414,13 @@
 		};
 		C3472D0C1CCF02D8007CC4F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EDCE329317337463CBDA1A5A /* Pods-CPlusKitchen.debug.xcconfig */;
+			baseConfigurationReference = EB607D1082A7726FDFE1542F /* Pods-CPlusKitchen.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = CPlusKitchen/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lotszkit.CPlusKitchen;
@@ -398,9 +430,13 @@
 		};
 		C3472D0D1CCF02D8007CC4F7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E9DF26F3429EEBC50C81BC2C /* Pods-CPlusKitchen.release.xcconfig */;
+			baseConfigurationReference = 7E661D4234041A03F9F3AE57 /* Pods-CPlusKitchen.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = CPlusKitchen/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lotszkit.CPlusKitchen;

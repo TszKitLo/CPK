@@ -13,12 +13,22 @@ class LandingVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+       
+        
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    
+    override func viewDidAppear(animated: Bool) {
+        if NSUserDefaults.standardUserDefaults().valueForKey(USER_ID) != nil{
+            //self.performSegueWithIdentifier("goToHome", sender: nil)  // if already sign in , go to home screen directly
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        //FBSDKAppEvents.activateApp() Dispose of any resources that can be recreated.
     }
 
     @IBAction func loginButton(sender: AnyObject) {

@@ -76,6 +76,7 @@
                     <connections>
                         <segue destination="w1m-Lx-x4O" kind="show" identifier="toLogin" id="fqv-9k-qPR"/>
                         <segue destination="mdh-AI-dVX" kind="show" identifier="toSignUp" id="orA-bt-gpz"/>
+                        <segue destination="qTF-dY-1Yk" kind="show" identifier="goToHome" id="Chm-nq-DXl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -93,7 +94,20 @@
                     <view key="view" contentMode="scaleToFill" id="saV-dr-5zw">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1JT-Dx-EOE">
+                                <rect key="frame" x="246" y="285" width="108" height="30"/>
+                                <state key="normal" title="Facebook Login"/>
+                                <connections>
+                                    <action selector="fbLogin:" destination="8dU-gb-2oy" eventType="touchUpInside" id="Ohg-UV-EA6"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1JT-Dx-EOE" firstAttribute="centerX" secondItem="saV-dr-5zw" secondAttribute="centerX" id="1zx-y2-PLh"/>
+                            <constraint firstItem="1JT-Dx-EOE" firstAttribute="centerY" secondItem="saV-dr-5zw" secondAttribute="centerY" id="Ij7-LT-ePt"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="scd-F6-oeo">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="1ii-xO-5Q5">
@@ -102,6 +116,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="qTF-dY-1Yk" kind="show" identifier="goToHome" id="MKh-JJ-IMa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mn7-O2-kUg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -291,6 +308,24 @@
             </objects>
             <point key="canvasLocation" x="639" y="1831"/>
         </scene>
+        <!--Home-->
+        <scene sceneID="mo1-QE-sXa">
+            <objects>
+                <viewController id="qTF-dY-1Yk" customClass="Home" customModule="CPlusKitchen" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yDK-Qv-ZaU"/>
+                        <viewControllerLayoutGuide type="bottom" id="Iat-qT-3nQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1ph-Es-Esm">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xih-8L-VUa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-56" y="2696"/>
+        </scene>
         <!--Sign Up-->
         <scene sceneID="XAO-pH-Rqe">
             <objects>
@@ -395,6 +430,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="profileImage" destination="adz-ew-0Xn" id="STJ-i4-M9X"/>
+                        <segue destination="qTF-dY-1Yk" kind="show" identifier="goToHome" id="7uP-gw-3LN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZSY-Q7-u17" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -444,4 +480,7 @@
         <image name="cm_photo_library_white" width="24" height="24"/>
         <image name="defaultUser" width="512" height="512"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="7uP-gw-3LN"/>
+    </inferredMetricsTieBreakers>
 </document>

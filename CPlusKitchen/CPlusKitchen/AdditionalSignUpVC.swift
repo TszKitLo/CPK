@@ -9,6 +9,11 @@
 import Foundation
 import UIKit
 import Material
+import Firebase
+import FirebaseAuth
+import FirebaseDatabase
+import FBSDKLoginKit
+import FBSDKCoreKit
 
 class AdditionalSignUpVC: UIViewController{
     
@@ -41,7 +46,36 @@ class AdditionalSignUpVC: UIViewController{
         
     }
     
+    
+    
     @IBAction func signUp(sender: AnyObject) {
         
+        FIRAuth.auth()?.createUserWithEmail(user.email, password: user.password, completion: { AuthUser, err in
+            
+            DataService.instance.createUser(AuthUser!.uid, userObj: ["provider":"email","url":"www.google.com"]) // need to change to user data
+            
+            NSUserDefaults.standardUserDefaults().setValue((AuthUser?.uid)!, forKey: USER_ID)
+            self.performSegueWithIdentifier("goToHome", sender: nil)
+            FIRAuth.auth()?.signInWithEmail(self.user.email, password: self.user.password, completion: { AuthUser, err in
+                
+            })
+        })
+        
+        
+        
+        
     }
+    
+    private func ShowErrAlert(title : String , msg: String){
+        let alert = UIAlertController(title: title, message: msg, preferredStyle: .Alert)
+        let action = UIAlertAction(title: "Ok", style: .Default, handler: nil)
+        alert.addAction(action)
+        presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    
+    
+    
+    
+    
 }

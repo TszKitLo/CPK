@@ -9,6 +9,11 @@
 import Foundation
 import UIKit
 import Material
+import Firebase
+import FirebaseAuth
+import FirebaseDatabase
+import FBSDKLoginKit
+import FBSDKCoreKit
 
 class SignUpVC: UIViewController, TextFieldDelegate { // UIImagePickerControllerDelegate
     
@@ -71,15 +76,11 @@ class SignUpVC: UIViewController, TextFieldDelegate { // UIImagePickerController
         
         if( lastNameField.text == "" || firstNameField.text == "" || emailField.text == "" || passwordField.text == "" ){
             
-            let alert = UIAlertController(title: "Information Required", message: "Please fill in your first name, last name and email", preferredStyle: .Alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-            self.presentViewController(alert, animated: true, completion: nil)
+            ShowErrAlert("Information Required",msg: "Please fill in your first name, last name and email")
             
         } else if( passwordField.text!.characters.count < 8) {
             
-            let alert = UIAlertController(title: "Weak Password", message: "Password must contain at least 8 characters", preferredStyle: .Alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-            self.presentViewController(alert, animated: true, completion: nil)
+            ShowErrAlert("Weak Password",msg: "Password must contain at least 8 characters")
             
         } else {
             self.performSegueWithIdentifier("toAdditional", sender: self)
@@ -100,4 +101,17 @@ class SignUpVC: UIViewController, TextFieldDelegate { // UIImagePickerController
         }
         
     }
+    
+
+    
+    private func ShowErrAlert(title : String , msg: String){
+        let alert = UIAlertController(title: title, message: msg, preferredStyle: .Alert)
+        let action = UIAlertAction(title: "Ok", style: .Default, handler: nil)
+        alert.addAction(action)
+        presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    
+    
+    
 }
