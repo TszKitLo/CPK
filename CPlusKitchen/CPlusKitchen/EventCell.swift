@@ -23,14 +23,21 @@ class EventCell: UITableViewCell {
         eventTitle.text = event.eventTitle
         eventLikes.text = event.eventLikes
         
-        if img != nil{
-            eventImg.image = img
-        }else{
-            request = Alamofire.request(.GET, event.eventImgURL!).responseImage { response in
-                if let image = response.result.value{
-                    self.eventImg.image = image
+        
+        if let url = event.eventImgURL{
+            if img != nil{
+                eventImg.image = img
+            }else{
+                request = Alamofire.request(.GET, url).responseImage { response in
+                    if let image = response.result.value{
+                        self.eventImg.image = image
+                        Home.cache.setObject(image, forKey: url)
+                    }
                 }
             }
+            
+        }else{
+            eventImg.hidden = true
         }
         
     }

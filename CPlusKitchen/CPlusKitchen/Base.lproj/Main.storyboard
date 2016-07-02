@@ -102,11 +102,17 @@
                                     <action selector="fbLogin:" destination="8dU-gb-2oy" eventType="touchUpInside" id="Ohg-UV-EA6"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bqy-5X-U1l" customClass="GIDSignInButton">
+                                <rect key="frame" x="246" y="340" width="108" height="43"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="1JT-Dx-EOE" firstAttribute="centerX" secondItem="saV-dr-5zw" secondAttribute="centerX" id="1zx-y2-PLh"/>
+                            <constraint firstItem="bqy-5X-U1l" firstAttribute="centerX" secondItem="saV-dr-5zw" secondAttribute="centerX" id="8aq-DA-dbs"/>
+                            <constraint firstItem="bqy-5X-U1l" firstAttribute="top" secondItem="1JT-Dx-EOE" secondAttribute="bottom" constant="25" id="CeX-d3-8nJ"/>
                             <constraint firstItem="1JT-Dx-EOE" firstAttribute="centerY" secondItem="saV-dr-5zw" secondAttribute="centerY" id="Ij7-LT-ePt"/>
+                            <constraint firstItem="bks-98-XdT" firstAttribute="top" secondItem="bqy-5X-U1l" secondAttribute="bottom" constant="217" id="wqH-wp-lBR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="scd-F6-oeo">
@@ -117,6 +123,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="signInButton" destination="bqy-5X-U1l" id="J2F-7M-xy3"/>
                         <segue destination="qTF-dY-1Yk" kind="show" identifier="goToHome" id="MKh-JJ-IMa"/>
                     </connections>
                 </viewController>
@@ -384,6 +391,24 @@
             </objects>
             <point key="canvasLocation" x="-56" y="2696"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="T3a-tI-4JX">
+            <objects>
+                <viewController id="ykI-5w-S8v" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TNz-LH-6Fn"/>
+                        <viewControllerLayoutGuide type="bottom" id="l5D-EB-R7G"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TjT-pk-2Zt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rGi-sT-xxk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-56" y="3377"/>
+        </scene>
         <!--Sign Up-->
         <scene sceneID="XAO-pH-Rqe">
             <objects>
@@ -539,6 +564,6 @@
         <image name="defaultUser" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7uP-gw-3LN"/>
+        <segue reference="MKh-JJ-IMa"/>
     </inferredMetricsTieBreakers>
 </document>

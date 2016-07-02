@@ -12,9 +12,10 @@
 		0A0A3DE81D25FC8100053EA0 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A0A3DE51D25FC8100053EA0 /* FBSDKLoginKit.framework */; };
 		0A0A3DEA1D25FD6000053EA0 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0A3DE91D25FD6000053EA0 /* DataService.swift */; };
 		0A0A3DEC1D25FD8800053EA0 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0A3DEB1D25FD8800053EA0 /* Constant.swift */; };
-		0A0A3DF41D260C5E00053EA0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A0A3DF31D260C5E00053EA0 /* GoogleService-Info.plist */; };
 		0A0A3DF61D260D7E00053EA0 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0A3DF51D260D7E00053EA0 /* Home.swift */; };
 		0A8E0D4A1D271AEA00F923E0 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E0D491D271AEA00F923E0 /* EventCell.swift */; };
+		0ADB7AE31D2747AC00F94EFC /* PostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADB7AE21D2747AC00F94EFC /* PostVC.swift */; };
+		0ADB7AE61D2797CB00F94EFC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0ADB7AE51D2797CB00F94EFC /* GoogleService-Info.plist */; };
 		C330923E1D1CE66B000A14FD /* AdditionalSignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C330923D1D1CE66B000A14FD /* AdditionalSignUpVC.swift */; };
 		C3472CFD1CCF02D8007CC4F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3472CFC1CCF02D8007CC4F7 /* AppDelegate.swift */; };
 		C3472CFF1CCF02D8007CC4F7 /* LandingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3472CFE1CCF02D8007CC4F7 /* LandingVC.swift */; };
@@ -37,9 +38,10 @@
 		0A0A3DE51D25FC8100053EA0 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		0A0A3DE91D25FD6000053EA0 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		0A0A3DEB1D25FD8800053EA0 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
-		0A0A3DF31D260C5E00053EA0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0A0A3DF51D260D7E00053EA0 /* Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		0A8E0D491D271AEA00F923E0 /* EventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
+		0ADB7AE21D2747AC00F94EFC /* PostVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostVC.swift; sourceTree = "<group>"; };
+		0ADB7AE51D2797CB00F94EFC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7E661D4234041A03F9F3AE57 /* Pods-CPlusKitchen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CPlusKitchen.release.xcconfig"; path = "Pods/Target Support Files/Pods-CPlusKitchen/Pods-CPlusKitchen.release.xcconfig"; sourceTree = "<group>"; };
 		C330923D1D1CE66B000A14FD /* AdditionalSignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionalSignUpVC.swift; sourceTree = "<group>"; };
 		C3472CF91CCF02D8007CC4F7 /* CPlusKitchen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CPlusKitchen.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,7 +117,7 @@
 				C3472D001CCF02D8007CC4F7 /* Main.storyboard */,
 				C3472D031CCF02D8007CC4F7 /* Assets.xcassets */,
 				C3472D051CCF02D8007CC4F7 /* LaunchScreen.storyboard */,
-				0A0A3DF31D260C5E00053EA0 /* GoogleService-Info.plist */,
+				0ADB7AE51D2797CB00F94EFC /* GoogleService-Info.plist */,
 				C3472D081CCF02D8007CC4F7 /* Info.plist */,
 			);
 			path = CPlusKitchen;
@@ -142,11 +144,12 @@
 		C3472D141CCF036D007CC4F7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C330923D1D1CE66B000A14FD /* AdditionalSignUpVC.swift */,
+				0A0A3DF51D260D7E00053EA0 /* Home.swift */,
 				C3472CFE1CCF02D8007CC4F7 /* LandingVC.swift */,
 				C3472D0E1CCF0326007CC4F7 /* LoginVC.swift */,
 				C3472D101CCF0336007CC4F7 /* SignUpVC.swift */,
-				C330923D1D1CE66B000A14FD /* AdditionalSignUpVC.swift */,
-				0A0A3DF51D260D7E00053EA0 /* Home.swift */,
+				0ADB7AE21D2747AC00F94EFC /* PostVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -232,7 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3472D071CCF02D8007CC4F7 /* LaunchScreen.storyboard in Resources */,
-				0A0A3DF41D260C5E00053EA0 /* GoogleService-Info.plist in Resources */,
+				0ADB7AE61D2797CB00F94EFC /* GoogleService-Info.plist in Resources */,
 				C3472D041CCF02D8007CC4F7 /* Assets.xcassets in Resources */,
 				C3472D021CCF02D8007CC4F7 /* Main.storyboard in Resources */,
 			);
@@ -297,6 +300,7 @@
 				C38B07511CDA02CA00423AB7 /* Util.swift in Sources */,
 				C330923E1D1CE66B000A14FD /* AdditionalSignUpVC.swift in Sources */,
 				C3472CFD1CCF02D8007CC4F7 /* AppDelegate.swift in Sources */,
+				0ADB7AE31D2747AC00F94EFC /* PostVC.swift in Sources */,
 				C3472D111CCF0336007CC4F7 /* SignUpVC.swift in Sources */,
 				C36ECA151CD0572B00C9A361 /* User.swift in Sources */,
 				C39219BD1D138BD400B1B24C /* Event.swift in Sources */,
@@ -429,6 +433,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lotszkit.CPlusKitchen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Debug;
 		};
@@ -445,6 +450,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lotszkit.CPlusKitchen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};

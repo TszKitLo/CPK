@@ -10,8 +10,7 @@ import Foundation
 import UIKit
 import Material
 import Firebase
-import FirebaseAuth
-import FirebaseDatabase
+
 import FBSDKLoginKit
 import FBSDKCoreKit
 

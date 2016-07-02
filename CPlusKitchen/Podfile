@@ -11,5 +11,6 @@ pod 'Material', '~> 1.0'
 pod 'MaterialKit', '~> 0.4'
 pod 'Alamofire', '~> 3.4'
 pod 'AlamofireImage', '~> 2.0'
+pod 'GoogleSignIn'
 end
 

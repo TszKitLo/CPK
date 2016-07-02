@@ -8,7 +8,6 @@
 
 import Foundation
 import Firebase
-import FirebaseDatabase
 
 class DataService{
     static let instance = DataService()
