@@ -14,7 +14,7 @@ class DataService{
     static let instance = DataService()
     private var _ref = FIRDatabase.database().reference()
     private var _users_ref = FIRDatabase.database().reference().child("users")
-    private var _posts_ref = FIRDatabase.database().reference().child("posts")
+    private var _posts_ref = FIRDatabase.database().reference().child("events")
 
 
     var ref : FIRDatabaseReference{

@@ -1,4 +1,7 @@
 PODS:
+  - Alamofire (3.4.1)
+  - AlamofireImage (2.4.0):
+    - Alamofire (~> 3.3)
   - Firebase (3.2.1):
     - Firebase/Core (= 3.2.1)
   - Firebase/Analytics (3.2.1):
@@ -34,6 +37,8 @@ PODS:
   - MaterialKit (0.4)
 
 DEPENDENCIES:
+  - Alamofire (~> 3.4)
+  - AlamofireImage (~> 2.0)
   - Firebase
   - Firebase/Auth
   - Firebase/Database
@@ -41,6 +46,8 @@ DEPENDENCIES:
   - MaterialKit (~> 0.4)
 
 SPEC CHECKSUMS:
+  Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
+  AlamofireImage: 87408b652e0f5ae5fe364035f15aea8b9b24c77e
   Firebase: 6c80ac28d59d06bfd9152a7b6ea17625ca93183d
   FirebaseAnalytics: 6f75b04e6bfb8e0b6e9ef298e04c24eea3b13863
   FirebaseAuth: 94b851fc345ce98036dfedfdc2eddeaef8fa3b4c
@@ -53,6 +60,6 @@ SPEC CHECKSUMS:
   Material: 76dc9b14ad8b3a2ad673b77ad73dd66ed1eee68c
   MaterialKit: 2e5267bcf410b82793f2b92d2111f8ae4ed2c3f2
 
-PODFILE CHECKSUM: b01c232c7b731bc0195e0e94a2df809b2828f5b3
+PODFILE CHECKSUM: 7962499d46356a95f9fa70aee4243e00dd8fc579
 
 COCOAPODS: 1.0.1

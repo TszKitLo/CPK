@@ -29,10 +29,6 @@ class AdditionalSignUpVC: UIViewController{
         prepareProfileImg()
     }
     
-    override func viewDidAppear(animated: Bool) {
-        
-    }
-    
     // MARK: viewDidLoad helper functions
     func prepareProfileImg(){
         profileImage.layer.masksToBounds = true

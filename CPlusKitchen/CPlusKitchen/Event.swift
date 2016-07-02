@@ -7,14 +7,45 @@
 //
 
 import Foundation
+import UIKit
 
 
 class Event{
     
-//    var date: NSDate;
+    //    var date: NSDate;
+    private var _eventID : String
+    private var _eventTitle : String
+    private var _eventImgURL : String?
+    private var _eventLikes: String
     
-    init(){
-//        date = NSDate.
+    
+    var eventID : String{
+        return _eventID
+    }
+    var eventTitle : String{
+        return _eventTitle
+        
+    }
+    var eventImgURL : String?{
+        return _eventImgURL    }
+    var eventLikes: String{
+        return _eventLikes
+        
+    }
+    
+    
+    init(id: String, data: [String : AnyObject]){
+        //        date = NSDate.
+        
+        
+        let title = data["title"] as! String
+        let likes = data["likes"] as! Int
+        let imgURL = data["imgURL"] as? String
+        
+        _eventID = id
+        _eventTitle = title
+        _eventImgURL = imgURL
+        _eventLikes = "\(likes)"
     }
     
 }
