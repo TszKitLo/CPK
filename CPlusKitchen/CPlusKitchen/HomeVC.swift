@@ -1,5 +1,5 @@
 //
-//  Home.swift
+//  HomeVC.swift
 //  CPlusKitchen
 //
 //  Created by k on 6/30/16.
@@ -9,7 +9,12 @@
 import UIKit
 
 
-class Home: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
+    
+
+    @IBOutlet weak var navBar: UINavigationItem!
+
+    
     /// A tableView used to display Bond entries.
     @IBOutlet weak var tableView: UITableView!
     
@@ -19,7 +24,8 @@ class Home: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        prepareNavBar()
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -41,7 +47,9 @@ class Home: UIViewController,UITableViewDelegate,UITableViewDataSource {
         
         
     }
+    
     override func viewDidAppear(animated: Bool) {
+        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -52,6 +60,7 @@ class Home: UIViewController,UITableViewDelegate,UITableViewDataSource {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return events.count
     }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let event = events[indexPath.row]
@@ -63,7 +72,7 @@ class Home: UIViewController,UITableViewDelegate,UITableViewDataSource {
             var img: UIImage?
             
             if let url = event.eventImgURL{
-                img = Home.cache.objectForKey(url) as? UIImage
+                img = HomeVC.cache.objectForKey(url) as? UIImage
             }
             
             
@@ -74,6 +83,7 @@ class Home: UIViewController,UITableViewDelegate,UITableViewDataSource {
         return UITableViewCell()
         
     }
+    
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         //tableView.estimatedRowHeight
         return 80
@@ -83,6 +93,18 @@ class Home: UIViewController,UITableViewDelegate,UITableViewDataSource {
         return 1
     }
     
+    func prepareNavBar() {
+        
+        navBar.title = "Home"
+        navBar.leftBarButtonItem = UIBarButtonItem(image: UIImage.init(named: "cm_menu_white"), style: .Plain, target: self, action: #selector(SSASideMenu.presentLeftMenuViewController))
+        
+        navBar.rightBarButtonItem = UIBarButtonItem(image: UIImage.init(named: "cm_search_white"), style: .Plain, target: self, action: #selector(HomeVC.search))
+        
+    }
+
+    func search() {
+        
+    }
     
     
     

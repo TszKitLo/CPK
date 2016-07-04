@@ -31,7 +31,7 @@ class EventCell: UITableViewCell {
                 request = Alamofire.request(.GET, url).responseImage { response in
                     if let image = response.result.value{
                         self.eventImg.image = image
-                        Home.cache.setObject(image, forKey: url)
+                        HomeVC.cache.setObject(image, forKey: url)
                     }
                 }
             }

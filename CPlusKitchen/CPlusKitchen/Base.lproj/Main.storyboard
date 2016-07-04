@@ -76,7 +76,7 @@
                     <connections>
                         <segue destination="w1m-Lx-x4O" kind="show" identifier="toLogin" id="fqv-9k-qPR"/>
                         <segue destination="mdh-AI-dVX" kind="show" identifier="toSignUp" id="orA-bt-gpz"/>
-                        <segue destination="qTF-dY-1Yk" kind="show" identifier="goToHome" id="Chm-nq-DXl"/>
+                        <segue destination="2v5-h7-pNj" kind="presentation" identifier="goToHome" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="SBK-4m-6rE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -102,21 +102,23 @@
                                     <action selector="fbLogin:" destination="8dU-gb-2oy" eventType="touchUpInside" id="Ohg-UV-EA6"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bqy-5X-U1l" customClass="GIDSignInButton">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bqy-5X-U1l" customClass="GIDSignInButton">
                                 <rect key="frame" x="246" y="340" width="108" height="43"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="1JT-Dx-EOE" firstAttribute="centerX" secondItem="saV-dr-5zw" secondAttribute="centerX" id="1zx-y2-PLh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bqy-5X-U1l" secondAttribute="trailing" constant="226" id="4ZW-4w-MbV"/>
                             <constraint firstItem="bqy-5X-U1l" firstAttribute="centerX" secondItem="saV-dr-5zw" secondAttribute="centerX" id="8aq-DA-dbs"/>
                             <constraint firstItem="bqy-5X-U1l" firstAttribute="top" secondItem="1JT-Dx-EOE" secondAttribute="bottom" constant="25" id="CeX-d3-8nJ"/>
+                            <constraint firstItem="bqy-5X-U1l" firstAttribute="leading" secondItem="saV-dr-5zw" secondAttribute="leadingMargin" constant="226" id="IHa-1I-xin"/>
                             <constraint firstItem="1JT-Dx-EOE" firstAttribute="centerY" secondItem="saV-dr-5zw" secondAttribute="centerY" id="Ij7-LT-ePt"/>
                             <constraint firstItem="bks-98-XdT" firstAttribute="top" secondItem="bqy-5X-U1l" secondAttribute="bottom" constant="217" id="wqH-wp-lBR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="scd-F6-oeo">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="1ii-xO-5Q5">
+                        <barButtonItem key="leftBarButtonItem" image="cm_arrow_back_white" id="1ii-xO-5Q5">
                             <connections>
                                 <action selector="backButton:" destination="8dU-gb-2oy" id="VLQ-Um-k4N"/>
                             </connections>
@@ -124,7 +126,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="signInButton" destination="bqy-5X-U1l" id="J2F-7M-xy3"/>
-                        <segue destination="qTF-dY-1Yk" kind="show" identifier="goToHome" id="MKh-JJ-IMa"/>
+                        <segue destination="2v5-h7-pNj" kind="presentation" identifier="goToHome" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="xgd-WU-tdH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mn7-O2-kUg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -318,7 +320,7 @@
         <!--Home-->
         <scene sceneID="mo1-QE-sXa">
             <objects>
-                <viewController id="qTF-dY-1Yk" customClass="Home" customModule="CPlusKitchen" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="qTF-dY-1Yk" customClass="HomeVC" customModule="CPlusKitchen" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yDK-Qv-ZaU"/>
                         <viewControllerLayoutGuide type="bottom" id="Iat-qT-3nQ"/>
@@ -383,13 +385,60 @@
                             <constraint firstItem="Iat-qT-3nQ" firstAttribute="top" secondItem="Kvw-lB-PZ1" secondAttribute="bottom" id="z4q-FD-eUM"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Home" id="4hX-FJ-ozw"/>
                     <connections>
+                        <outlet property="navBar" destination="4hX-FJ-ozw" id="r5W-ed-DVG"/>
                         <outlet property="tableView" destination="Kvw-lB-PZ1" id="kpE-Hy-9JJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xih-8L-VUa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-56" y="2696"/>
+            <point key="canvasLocation" x="-8" y="4102"/>
+        </scene>
+        <!--Side Menu-->
+        <scene sceneID="qOQ-7S-oP0">
+            <objects>
+                <viewController storyboardIdentifier="SSAView" id="2v5-h7-pNj" customClass="SSASideMenu" customModule="CPlusKitchen" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4sG-hm-afZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="YBC-HX-HnA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8Wk-2I-kzR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="contentViewStoryboardID" value="HomeViewController"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="leftMenuViewStoryboardID" value="LeftMenuDrawerViewController"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="fadeMenuView" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="scaleMenuView" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="scaleBackgroundImageView" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="parallaxEnabled" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="bouncesHorizontally" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TL3-fC-kFi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-679" y="2675"/>
+        </scene>
+        <!--Left Menu DrawerVC-->
+        <scene sceneID="1o1-ld-QEU">
+            <objects>
+                <viewController storyboardIdentifier="LeftMenuDrawerViewController" id="hNT-3U-Mbq" customClass="LeftMenuDrawerVC" customModule="CPlusKitchen" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RpY-90-9IC"/>
+                        <viewControllerLayoutGuide type="bottom" id="ftt-8r-Xa2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="j31-Yt-LKx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.73725490199999999" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="95Q-Yn-4rb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-679" y="3366"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="T3a-tI-4JX">
@@ -407,7 +456,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rGi-sT-xxk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-56" y="3377"/>
+            <point key="canvasLocation" x="804" y="4279"/>
         </scene>
         <!--Sign Up-->
         <scene sceneID="XAO-pH-Rqe">
@@ -513,7 +562,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="profileImage" destination="adz-ew-0Xn" id="STJ-i4-M9X"/>
-                        <segue destination="qTF-dY-1Yk" kind="show" identifier="goToHome" id="7uP-gw-3LN"/>
+                        <segue destination="2v5-h7-pNj" kind="presentation" identifier="goToHome" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="tNu-N7-i8A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZSY-Q7-u17" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -556,6 +605,24 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="1135"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Yhh-JF-FSO">
+            <objects>
+                <navigationController storyboardIdentifier="HomeViewController" automaticallyAdjustsScrollViewInsets="NO" id="flY-Tq-IkU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5uK-Ve-ehg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qTF-dY-1Yk" kind="relationship" relationship="rootViewController" id="khl-gE-9ex"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Fw-a5-UCP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-8" y="3366"/>
+        </scene>
     </scenes>
     <resources>
         <image name="cm_arrow_back_white" width="24" height="24"/>
@@ -564,6 +631,6 @@
         <image name="defaultUser" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="MKh-JJ-IMa"/>
+        <segue reference="tNu-N7-i8A"/>
     </inferredMetricsTieBreakers>
 </document>

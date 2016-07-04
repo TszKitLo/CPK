@@ -12,7 +12,7 @@
 		0A0A3DE81D25FC8100053EA0 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A0A3DE51D25FC8100053EA0 /* FBSDKLoginKit.framework */; };
 		0A0A3DEA1D25FD6000053EA0 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0A3DE91D25FD6000053EA0 /* DataService.swift */; };
 		0A0A3DEC1D25FD8800053EA0 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0A3DEB1D25FD8800053EA0 /* Constant.swift */; };
-		0A0A3DF61D260D7E00053EA0 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0A3DF51D260D7E00053EA0 /* Home.swift */; };
+		0A0A3DF61D260D7E00053EA0 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0A3DF51D260D7E00053EA0 /* HomeVC.swift */; };
 		0A8E0D4A1D271AEA00F923E0 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E0D491D271AEA00F923E0 /* EventCell.swift */; };
 		0ADB7AE31D2747AC00F94EFC /* PostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADB7AE21D2747AC00F94EFC /* PostVC.swift */; };
 		0ADB7AE61D2797CB00F94EFC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0ADB7AE51D2797CB00F94EFC /* GoogleService-Info.plist */; };
@@ -28,6 +28,8 @@
 		C38B07511CDA02CA00423AB7 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38B07501CDA02CA00423AB7 /* Util.swift */; };
 		C39219BD1D138BD400B1B24C /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39219BC1D138BD400B1B24C /* Event.swift */; };
 		C39219BF1D138C7B00B1B24C /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39219BE1D138C7B00B1B24C /* Payment.swift */; };
+		C3B970A31D2A90EE00CA6BB5 /* LeftMenuDrawerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B970A21D2A90EE00CA6BB5 /* LeftMenuDrawerVC.swift */; };
+		C3B970A71D2A98F900CA6BB5 /* SSASideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B970A61D2A98F900CA6BB5 /* SSASideMenu.swift */; };
 		F32B37D3377342CC1491654C /* Pods_CPlusKitchen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0188042C45B9F31E8BBC74AC /* Pods_CPlusKitchen.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,7 +40,7 @@
 		0A0A3DE51D25FC8100053EA0 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		0A0A3DE91D25FD6000053EA0 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		0A0A3DEB1D25FD8800053EA0 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
-		0A0A3DF51D260D7E00053EA0 /* Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		0A0A3DF51D260D7E00053EA0 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		0A8E0D491D271AEA00F923E0 /* EventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		0ADB7AE21D2747AC00F94EFC /* PostVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostVC.swift; sourceTree = "<group>"; };
 		0ADB7AE51D2797CB00F94EFC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -57,6 +59,8 @@
 		C38B07501CDA02CA00423AB7 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		C39219BC1D138BD400B1B24C /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		C39219BE1D138C7B00B1B24C /* Payment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
+		C3B970A21D2A90EE00CA6BB5 /* LeftMenuDrawerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMenuDrawerVC.swift; sourceTree = "<group>"; };
+		C3B970A61D2A98F900CA6BB5 /* SSASideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SSASideMenu.swift; path = ../../../SSASideMenu/Examples/Storyboard/SSASideMenuStoryboardExample/SSASideMenu.swift; sourceTree = "<group>"; };
 		C3F632831D21FC5200D43261 /* Material.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Material.framework; path = "../../../Library/Developer/Xcode/DerivedData/CPlusKitchen-gqjumvqijdljqgbxsekwevzzooly/Build/Products/Debug-iphonesimulator/Material.framework"; sourceTree = "<group>"; };
 		EB607D1082A7726FDFE1542F /* Pods-CPlusKitchen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CPlusKitchen.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CPlusKitchen/Pods-CPlusKitchen.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -145,7 +149,8 @@
 			isa = PBXGroup;
 			children = (
 				C330923D1D1CE66B000A14FD /* AdditionalSignUpVC.swift */,
-				0A0A3DF51D260D7E00053EA0 /* Home.swift */,
+				0A0A3DF51D260D7E00053EA0 /* HomeVC.swift */,
+				C3B970A21D2A90EE00CA6BB5 /* LeftMenuDrawerVC.swift */,
 				C3472CFE1CCF02D8007CC4F7 /* LandingVC.swift */,
 				C3472D0E1CCF0326007CC4F7 /* LoginVC.swift */,
 				C3472D101CCF0336007CC4F7 /* SignUpVC.swift */,
@@ -157,6 +162,7 @@
 		C3472D151CCF0375007CC4F7 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				C3B970A61D2A98F900CA6BB5 /* SSASideMenu.swift */,
 				0A0A3DEB1D25FD8800053EA0 /* Constant.swift */,
 				0A0A3DE91D25FD6000053EA0 /* DataService.swift */,
 				C38B07501CDA02CA00423AB7 /* Util.swift */,
@@ -308,8 +314,10 @@
 				C39219BF1D138C7B00B1B24C /* Payment.swift in Sources */,
 				0A0A3DEC1D25FD8800053EA0 /* Constant.swift in Sources */,
 				C3472D0F1CCF0326007CC4F7 /* LoginVC.swift in Sources */,
-				0A0A3DF61D260D7E00053EA0 /* Home.swift in Sources */,
+				0A0A3DF61D260D7E00053EA0 /* HomeVC.swift in Sources */,
+				C3B970A71D2A98F900CA6BB5 /* SSASideMenu.swift in Sources */,
 				0A0A3DEA1D25FD6000053EA0 /* DataService.swift in Sources */,
+				C3B970A31D2A90EE00CA6BB5 /* LeftMenuDrawerVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
