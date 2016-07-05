@@ -14,16 +14,18 @@ import Firebase
 import FBSDKLoginKit
 import FBSDKCoreKit
 
-class AdditionalSignUpVC: UIViewController{
+class AdditionalSignUpVC: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate{
     
     var user = User()
     
     @IBOutlet weak var profileImage: UIImageView!
     
+    let imagePicker = UIImagePickerController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        imagePicker.delegate = self;
         
         prepareProfileImg()
     }
@@ -41,7 +43,13 @@ class AdditionalSignUpVC: UIViewController{
     }
     
     @IBAction func addImageFromAlbum(sender: AnyObject) {
-        
+        presentViewController(imagePicker,animated: true,completion:nil)
+    }
+    
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+        profileImage.image = image // finishing picking image from album
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     @IBAction func addImageFromCamera(sender: AnyObject) {
@@ -55,14 +63,21 @@ class AdditionalSignUpVC: UIViewController{
         
         FIRAuth.auth()?.createUserWithEmail(user.email, password: user.password, completion: { AuthUser, err in
             if err != nil{
-                print(err)
+                print(err?.localizedDescription)
             }else{
-                DataService.instance.createUser(AuthUser!.uid, userObj: self.user.getUserObject()) // need to change to user data
-                
+                DataService.instance.uploadImage(self.profileImage.image!, completion: { url in
+                    self.user.profilePicURL = url
+                    DataService.instance.createUser(AuthUser!.uid, userObj: self.user.getUserObject()) // need to change to user data
+
+                })   // upload image from local
                 NSUserDefaults.standardUserDefaults().setValue((AuthUser?.uid)!, forKey: USER_ID)
-                self.performSegueWithIdentifier("goToHome", sender: nil)
                 FIRAuth.auth()?.signInWithEmail(self.user.email, password: self.user.password, completion: { AuthUser, err in
-                    
+                    if err != nil{
+                        print(err?.localizedDescription)
+                    }else{
+                        self.performSegueWithIdentifier("goToHome", sender: nil)
+                        
+                    }
                 })
                 
             }

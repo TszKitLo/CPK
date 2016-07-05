@@ -42,25 +42,16 @@ class LoginVC: UIViewController,GIDSignInUIDelegate, GIDSignInDelegate {
                 print("log in failed \(facebookError)" )
             }else{
                 let credential = FIRFacebookAuthProvider.credentialWithAccessToken(FBSDKAccessToken.currentAccessToken().tokenString)
+                
+                
                 FIRAuth.auth()?.signInWithCredential(credential, completion: { AuthUser , err in
                     if err != nil{
                         print(err)
                     }else{
                         
-                        //                        let parameters =  ["fields": "id,about,birthday,email,gender,name,picture"]    // get user and user's friend info
-                        //                        let parameters2 =  ["fields": "name,picture,gender"]
-                        //
-                        //                        let fbRequest = FBSDKGraphRequest(graphPath:"me/taggable_friends", parameters: parameters2);
-                        //                        fbRequest.startWithCompletionHandler { (connection : FBSDKGraphRequestConnection!, result : AnyObject!, error : NSError!) -> Void in
-                        //
-                        //                            if error == nil {
-                        //                                print("User Info : \(result)")
-                        //                            } else {
-                        //                                print("Error Getting Info \(error)");
-                        //                            }
-                        //                        }
                         
-                        DataService.instance.createUser(AuthUser!.uid, userObj: ["provider":"facebook","url":"www.google.com"]) // next step :need to load user information
+                        
+                        DataService.instance.createUserWithProvider("facebook") // next step :need to load user information
                         NSUserDefaults.standardUserDefaults().setValue((AuthUser?.uid)!, forKey: USER_ID)
                         self.performSegueWithIdentifier("goToHome", sender: nil)
                         
@@ -106,44 +97,41 @@ class LoginVC: UIViewController,GIDSignInUIDelegate, GIDSignInDelegate {
     //    }
     //
     
-//    func signInWillDispatch(signIn: GIDSignIn!, error: NSError!) {
-//        //myActivityIndicator.stopAnimating()
-//    }
-//    
-//    // Present a view that prompts the user to sign in with Google
-//    func signIn(signIn: GIDSignIn!,
-//                presentViewController viewController: UIViewController!) {
-//        self.presentViewController(viewController, animated: true, completion: nil)
-//    }
-//    
-//    // Dismiss the "Sign in with Google" view
-//    func signIn(signIn: GIDSignIn!,
-//                dismissViewController viewController: UIViewController!) {
-//        self.dismissViewControllerAnimated(true, completion: nil)
-//    }
-
+    //    func signInWillDispatch(signIn: GIDSignIn!, error: NSError!) {
+    //        //myActivityIndicator.stopAnimating()
+    //    }
+    //
+    //    // Present a view that prompts the user to sign in with Google
+    //    func signIn(signIn: GIDSignIn!,
+    //                presentViewController viewController: UIViewController!) {
+    //        self.presentViewController(viewController, animated: true, completion: nil)
+    //    }
+    //
+    //    // Dismiss the "Sign in with Google" view
+    //    func signIn(signIn: GIDSignIn!,
+    //                dismissViewController viewController: UIViewController!) {
+    //        self.dismissViewControllerAnimated(true, completion: nil)
+    //    }
+    
     
     
     func signIn(signIn: GIDSignIn!, didSignInForUser user: GIDGoogleUser!,
                 withError error: NSError!) {
+        
+        
         if (error == nil) {
             // Perform any operations on signed in user here.
-            let userId = user.userID                  // For client-side use only!
-            let idToken = user.authentication.idToken // Safe to send to the server
-            let fullName = user.profile.name
-            let givenName = user.profile.givenName
-            let familyName = user.profile.familyName
-            let email = user.profile.email
             
             let authentication = user.authentication
             let credential = FIRGoogleAuthProvider.credentialWithIDToken(authentication.idToken,
                                                                          accessToken: authentication.accessToken)
             
             FIRAuth.auth()?.signInWithCredential(credential) { (user, error) in
-                // ...
+                DataService.instance.createUserWithProvider("google")
+                self.performSegueWithIdentifier("goToHome", sender: nil)
             }
             // ...
-
+            
             
             // ...
         } else {

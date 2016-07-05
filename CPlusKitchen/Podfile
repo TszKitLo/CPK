@@ -7,6 +7,7 @@ target 'CPlusKitchen' do
 pod 'Firebase'
 pod 'Firebase/Auth'
 pod 'Firebase/Database'
+pod 'Firebase/Storage'
 pod 'Material', '~> 1.0'
 pod 'MaterialKit', '~> 0.4'
 pod 'Alamofire', '~> 3.4'

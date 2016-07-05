@@ -16,7 +16,7 @@ class User {
     var firstName = ""
     var email = ""
     var password = ""
-    var profilePic = UIImagePNGRepresentation(UIImage(named: "defaultUser")!)!
+    var profilePicURL = ""
     var address = ""
     
     init(){
@@ -30,7 +30,7 @@ class User {
     
     func getUserObject() -> [String:String]{
         
-        let userObject = ["firstName": firstName , "lastName" : lastName , "email" : email , "address": address]
+        let userObject = ["name": firstName + " " + lastName , "email" : email , "address": address , "photoURL":profilePicURL]
         
         return userObject
     }

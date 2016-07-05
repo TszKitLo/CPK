@@ -34,6 +34,8 @@ class Event{
     }
     
     
+    
+    
     init(id: String, data: [String : AnyObject]){
         //        date = NSDate.
         
@@ -46,6 +48,15 @@ class Event{
         _eventTitle = title
         _eventImgURL = imgURL
         _eventLikes = "\(likes)"
+    }
+    
+    
+    func adjustLikes(setLike: Bool){
+        if setLike{
+            DataService.instance.posts_ref.child(self._eventID + "/likes").setValue(Int(_eventLikes)!+1)
+        }else{
+            DataService.instance.posts_ref.child(self._eventID + "/likes").setValue(Int(_eventLikes)!-1)
+        }
     }
     
 }

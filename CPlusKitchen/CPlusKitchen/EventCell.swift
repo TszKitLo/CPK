@@ -9,20 +9,68 @@
 import UIKit
 import Alamofire
 import AlamofireImage
+import Firebase
+
+
+protocol EventCellDelegate{
+    func likeButtonPressed(eventID:String,likes:String, completionHandler: (Bool)-> () ) -> Void
+    func didUserLikedBefore(eventID:String, completionHandler: (Bool)-> () ) -> Void
+
+}
+
 
 class EventCell: UITableViewCell {
     
     @IBOutlet weak var eventImg: UIImageView!
     @IBOutlet weak var eventTitle: UILabel!
     @IBOutlet weak var eventLikes: UILabel!
+    @IBOutlet weak var heartImage: UIImageView!
+    
+    private var eventID: String!
+    var eventCellDelegate : EventCellDelegate!
+    
     
     var request : Alamofire.Request? = nil
     
+    func likeTapped() {
+       eventCellDelegate.likeButtonPressed(eventID,likes: eventLikes.text!, completionHandler: LikeButtonUpdate)
+    }
+    
+    
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(EventCell.likeTapped))
+        tap.numberOfTapsRequired = 1
+        heartImage.addGestureRecognizer(tap)
+        heartImage.userInteractionEnabled = true
+        
+        
+    }
+
+    
+    
+    
+    
+    func LikeButtonUpdate(liked : Bool){
+        if liked{
+            heartImage.image = UIImage(named: "heart-full")
+        }else{
+            heartImage.image = UIImage(named: "heart-empty")
+        }
+    }
+    
     
     func configCell(event: Event, img: UIImage?){
+        
+        
         eventTitle.text = event.eventTitle
         eventLikes.text = event.eventLikes
+        eventID = event.eventID
         
+       // currentUserLikesRef = DataService.instance.users_ref.child((FIRAuth.auth()?.currentUser?.uid)!+"/likes/"+eventID)
+
         
         if let url = event.eventImgURL{
             if img != nil{
@@ -39,6 +87,8 @@ class EventCell: UITableViewCell {
         }else{
             eventImg.hidden = true
         }
+        
+        eventCellDelegate.didUserLikedBefore(eventID, completionHandler: LikeButtonUpdate)
         
     }
     
