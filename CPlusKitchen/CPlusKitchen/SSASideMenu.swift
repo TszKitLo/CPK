@@ -352,6 +352,10 @@ class SSASideMenu: UIViewController, UIGestureRecognizerDelegate {
         hideMenuViewController(true)
     }
     
+    func instantiateView(storyboardId: String) {
+        contentViewController = storyboard?.instantiateViewControllerWithIdentifier(storyboardId)
+    }
+    
     
     private func showRightMenuViewController() {
         

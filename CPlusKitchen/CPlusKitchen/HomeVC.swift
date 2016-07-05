@@ -10,13 +10,11 @@ import UIKit
 
 
 class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
-    
-
-    @IBOutlet weak var navBar: UINavigationItem!
 
     
     /// A tableView used to display Bond entries.
     @IBOutlet weak var tableView: UITableView!
+
     
     private var events = [Event]()
     
@@ -46,6 +44,11 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
         
         
         
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -95,10 +98,10 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     func prepareNavBar() {
         
-        navBar.title = "Home"
-        navBar.leftBarButtonItem = UIBarButtonItem(image: UIImage.init(named: "cm_menu_white"), style: .Plain, target: self, action: #selector(SSASideMenu.presentLeftMenuViewController))
+        self.title = "Home"
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage.init(named: "cm_menu_white"), style: .Plain, target: self, action: #selector(SSASideMenu.presentLeftMenuViewController))
         
-        navBar.rightBarButtonItem = UIBarButtonItem(image: UIImage.init(named: "cm_search_white"), style: .Plain, target: self, action: #selector(HomeVC.search))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage.init(named: "cm_search_white"), style: .Plain, target: self, action: #selector(HomeVC.search))
         
     }
 
