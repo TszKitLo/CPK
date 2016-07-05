@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "3CAE97165322FB7A8E2F07AE769D6BF0AFC27B15",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "8C5B49DA32D8F06B9E0E0039B9D631C42442FDE3" : 0,
+    "3CAE97165322FB7A8E2F07AE769D6BF0AFC27B15" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "AD07B9E4-0CF3-4C07-AD10-3C8B81867F14",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "8C5B49DA32D8F06B9E0E0039B9D631C42442FDE3" : "SSASideMenu\/",
+    "3CAE97165322FB7A8E2F07AE769D6BF0AFC27B15" : "CPK\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "CPlusKitchen",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "CPlusKitchen\/CPlusKitchen.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/TszKitLo\/CPK.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3CAE97165322FB7A8E2F07AE769D6BF0AFC27B15"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/SSA111\/SSASideMenu.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8C5B49DA32D8F06B9E0E0039B9D631C42442FDE3"
+    }
+  ]
+}
