@@ -16,10 +16,7 @@ import FBSDKCoreKit
 
 class LoginVC: UIViewController,GIDSignInUIDelegate, GIDSignInDelegate {
     
-    
-    
-    @IBOutlet weak var signInButton: GIDSignInButton!
-    
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
         GIDSignIn.sharedInstance().uiDelegate = self

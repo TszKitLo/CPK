@@ -9,9 +9,10 @@
 import UIKit
 import Firebase
 
-class Home: UIViewController,UITableViewDelegate,UITableViewDataSource,EventCellDelegate {
+class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource,EventCellDelegate {
     /// A tableView used to display Bond entries.
     @IBOutlet weak var tableView: UITableView!
+
     private var currentUserLikesRef : FIRDatabaseReference!
     
     private var events = [Event]()
@@ -21,7 +22,7 @@ class Home: UIViewController,UITableViewDelegate,UITableViewDataSource,EventCell
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        prepareNavBar()
         
         
         self.navigationItem.setHidesBackButton(true, animated: false) // not allow go back to login
@@ -113,7 +114,7 @@ class Home: UIViewController,UITableViewDelegate,UITableViewDataSource,EventCell
             var img: UIImage?
             
             if let url = event.eventImgURL{
-                img = Home.cache.objectForKey(url) as? UIImage
+                img = HomeVC.cache.objectForKey(url) as? UIImage
             }
             
             cell.configCell(event,img: img)
@@ -140,7 +141,20 @@ class Home: UIViewController,UITableViewDelegate,UITableViewDataSource,EventCell
         return 1
     }
     
+    func prepareNavBar() {
+        
+        self.title = "Home"
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage.init(named: "cm_menu_white"), style: .Plain, target: self, action: #selector(SSASideMenu.presentLeftMenuViewController))
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage.init(named: "cm_search_white"), style: .Plain, target: self, action: #selector(HomeVC.search))
+        
+    }
     
+    
+    func search(){
+        
+    }
+
     
     
 }
